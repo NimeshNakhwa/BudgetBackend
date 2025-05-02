@@ -1,0 +1,213 @@
+2024-10-25T14:08:53.507+05:30 ERROR 241060 --- [Budget] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.com.budgetapp' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.com.budgetapp
+    Value: "DEBUG  # This enables DEBUG level logging for your application"
+    Origin: class path resource [application.properties] - 14:29
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.DEBUG  # This enables DEBUG level logging for your application)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
+2024-10-25T14:09:01.084+05:30 ERROR 241060 --- [Budget] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: String value [10MB  # Set the maximum size of the log file] is not in the expected format.
+	at ch.qos.logback.core.util.FileSize.valueOf(FileSize.java:81) ~[logback-core-1.5.11.jar:1.5.11]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.getProperty(LogbackLoggingSystemProperties.java:174) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.applyRollingPolicy(LogbackLoggingSystemProperties.java:157) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.applyRollingPolicyProperties(LogbackLoggingSystemProperties.java:145) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.apply(LogbackLoggingSystemProperties.java:133) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.LoggingSystemProperties.apply(LoggingSystemProperties.java:215) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.LoggingSystemProperties.apply(LoggingSystemProperties.java:210) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:291) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.5.jar:3.3.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.budgetapp.BudgetApplication.main(BudgetApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.5.jar:3.3.5]
+
+2024-10-25T14:09:46.315+05:30 ERROR 241060 --- [Budget] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: String value [10MB  # Set the maximum size of the log file] is not in the expected format.
+	at ch.qos.logback.core.util.FileSize.valueOf(FileSize.java:81) ~[logback-core-1.5.11.jar:1.5.11]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.getProperty(LogbackLoggingSystemProperties.java:174) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.applyRollingPolicy(LogbackLoggingSystemProperties.java:157) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.applyRollingPolicyProperties(LogbackLoggingSystemProperties.java:145) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.apply(LogbackLoggingSystemProperties.java:133) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.LoggingSystemProperties.apply(LoggingSystemProperties.java:215) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.LoggingSystemProperties.apply(LoggingSystemProperties.java:210) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:291) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.5.jar:3.3.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.budgetapp.BudgetApplication.main(BudgetApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.5.jar:3.3.5]
+
+2024-10-25T14:10:25.433+05:30 ERROR 241060 --- [Budget] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: String value [10MB  # Set the maximum size of the log file] is not in the expected format.
+	at ch.qos.logback.core.util.FileSize.valueOf(FileSize.java:81) ~[logback-core-1.5.11.jar:1.5.11]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.getProperty(LogbackLoggingSystemProperties.java:174) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.applyRollingPolicy(LogbackLoggingSystemProperties.java:157) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.applyRollingPolicyProperties(LogbackLoggingSystemProperties.java:145) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.apply(LogbackLoggingSystemProperties.java:133) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.LoggingSystemProperties.apply(LoggingSystemProperties.java:215) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.LoggingSystemProperties.apply(LoggingSystemProperties.java:210) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:291) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.5.jar:3.3.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.budgetapp.BudgetApplication.main(BudgetApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.5.jar:3.3.5]
+
+2024-10-25T14:10:46.252+05:30 ERROR 241060 --- [Budget] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: String value [10MB  # Set the maximum size of the log file] is not in the expected format.
+	at ch.qos.logback.core.util.FileSize.valueOf(FileSize.java:81) ~[logback-core-1.5.11.jar:1.5.11]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.getProperty(LogbackLoggingSystemProperties.java:174) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.applyRollingPolicy(LogbackLoggingSystemProperties.java:157) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.applyRollingPolicyProperties(LogbackLoggingSystemProperties.java:145) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystemProperties.apply(LogbackLoggingSystemProperties.java:133) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.LoggingSystemProperties.apply(LoggingSystemProperties.java:215) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.logging.LoggingSystemProperties.apply(LoggingSystemProperties.java:210) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:291) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.5.jar:3.3.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.budgetapp.BudgetApplication.main(BudgetApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.5.jar:3.3.5]
+
+2024-10-25T14:16:16.828+05:30 ERROR 275900 --- [Budget] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.com.budgetapp' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.com.budgetapp
+    Value: "DEBUG  # This enables DEBUG level logging for your application"
+    Origin: class path resource [application.properties] - 14:29
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.DEBUG  # This enables DEBUG level logging for your application)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
+2024-10-25T14:16:17.432+05:30 ERROR 241060 --- [Budget] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.com.budgetapp' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.com.budgetapp
+    Value: "DEBUG  # This enables DEBUG level logging for your application"
+    Origin: class path resource [application.properties] - 14:29
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.DEBUG  # This enables DEBUG level logging for your application)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
